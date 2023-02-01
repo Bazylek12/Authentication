@@ -9,7 +9,7 @@ import {FormControl, Validators} from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthNameComponent {
- // readonly form: FormGroup = new FormGroup({ name: new FormControl() });
+
   readonly name: FormControl = new FormControl('', [Validators.required, Validators.minLength(3)])
 
 }
