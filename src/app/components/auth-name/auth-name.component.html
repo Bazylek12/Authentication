@@ -1,0 +1,9 @@
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" placeholder="Name" [formControl]="name">
+          <mat-error *ngIf="name!.invalid">Name is invalid</mat-error>
+  </mat-form-field>
+  {{ name.valueChanges | async }}
+</div>
+
