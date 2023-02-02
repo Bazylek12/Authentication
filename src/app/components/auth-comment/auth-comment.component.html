@@ -1,0 +1,8 @@
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Write your comment...</mat-label>
+    <input matInput type="text" placeholder="Comment" [formControl]="comment">
+    <mat-error *ngIf="comment!.invalid">Comment needs to have minimum of 4 words</mat-error>
+  </mat-form-field>
+  {{ comment.valueChanges | async }}
+</div>

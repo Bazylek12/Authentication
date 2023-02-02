@@ -3,9 +3,11 @@ import {RouterModule} from '@angular/router';
 import {AuthNameComponent} from './components/auth-name/auth-name.component';
 import {AuthAgeComponent} from './components/auth-age/auth-age.component';
 import {AuthEmailComponent} from './components/auth-email/auth-email.component';
+import {AuthCommentComponent} from './components/auth-comment/auth-comment.component';
 import {AuthNameComponentModule} from './components/auth-name/auth-name.component-module';
 import {AuthAgeComponentModule} from './components/auth-age/auth-age.component-module';
 import {AuthEmailComponentModule} from './components/auth-email/auth-email.component-module';
+import {AuthCommentComponentModule} from './components/auth-comment/auth-comment.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{
@@ -14,7 +16,10 @@ import {AuthEmailComponentModule} from './components/auth-email/auth-email.compo
   }, {path: 'form-1-control-age', component: AuthAgeComponent}, {
     path: 'form-1-control-email',
     component: AuthEmailComponent
-  }]), AuthNameComponentModule, AuthAgeComponentModule, AuthEmailComponentModule],
+  }, {
+    path: 'form-1-control-comment',
+    component: AuthCommentComponent
+  }]), AuthNameComponentModule, AuthAgeComponentModule, AuthEmailComponentModule, AuthCommentComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
