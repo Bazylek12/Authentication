@@ -47,12 +47,12 @@
                 <input matInput type="text" placeholder="Password" formControlName="password" required>
               </mat-form-field>
               <div style="margin-bottom: auto" *ngIf="registerForm.dirty || registerForm.touched">
-                <mat-error *ngIf="registerForm.get('password')!.hasError('required')">Password is required</mat-error>
-                <mat-error *ngIf="registerForm.get('password')!.hasError('minlength')">Password must have at least 6 symbols</mat-error>
-                <mat-error *ngIf="registerForm.get('password')!.hasError('hasNumber')">Must contain at least 1 number character</mat-error>
-                <mat-error *ngIf="registerForm.get('password')!.hasError('hasLower')">Must contain at least 1 small character</mat-error>
-                <mat-error *ngIf="registerForm.get('password')!.hasError('hasUpper')">Must contain at least 1 capital character</mat-error>
-                <mat-error *ngIf="registerForm.get('password')!.hasError('hasSpecialSymbol')">Must contain at least 1 special character: !@#$%^*()</mat-error>
+                <mat-error *ngIf="registerForm.get('password')!.errors">{{ registerForm.get('password')!.errors | inputError}}</mat-error>
+<!--                <mat-error *ngIf="registerForm.get('password')!.hasError('minlength')">Password must have at least 6 symbols</mat-error>-->
+<!--                <mat-error *ngIf="registerForm.get('password')!.hasError('hasNumber')">Must contain at least 1 number character</mat-error>-->
+<!--                <mat-error *ngIf="registerForm.get('password')!.hasError('hasLower')">Must contain at least 1 small character</mat-error>-->
+<!--                <mat-error *ngIf="registerForm.get('password')!.hasError('hasUpper')">Must contain at least 1 capital character</mat-error>-->
+<!--                <mat-error *ngIf="registerForm.get('password')!.hasError('hasSpecialSymbol')">Must contain at least 1 special character: !@#$%^*()</mat-error>-->
               </div>
             </div>
             <div>

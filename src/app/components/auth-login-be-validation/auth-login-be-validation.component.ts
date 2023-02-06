@@ -1,18 +1,9 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 import { ValidationService } from '../../services/validation.service';
 import { Router } from '@angular/router';
 import { PasswordValidator } from "src/app/password-validator"
 
- export const passwordValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
-  const password: string = control.get('password')?.value;
-  const confirmPassword: string = control.get('repeatPassword')?.value
-
-  if (password !== confirmPassword) {
-    control.get('repeatPassword')?.setErrors({ noPasswordMatch: true})
-  }
-  return null;
-}
 
 @Component({
   selector: 'app-auth-login-be-validation',
@@ -22,6 +13,7 @@ import { PasswordValidator } from "src/app/password-validator"
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthLoginBeValidationComponent {
+
   readonly loginForm: FormGroup = new FormGroup({
     email: new FormControl('', Validators.email),
     password: new FormControl()

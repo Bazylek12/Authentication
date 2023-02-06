@@ -11,7 +11,7 @@ import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +21,7 @@ import {MatInputModule} from "@angular/material/input";
     AppRoutingModule,
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
