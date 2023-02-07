@@ -21,13 +21,13 @@ export class AuthSinglePageComponent {
 
   onLoginFormSubmitted(loginForm: FormGroup): void {
 
-    const email =loginForm.value.email;
-    const password = loginForm.value.password;
-    this._validationService.login(email, password)
-      .subscribe({
-        error: () => this._router.navigate(['/error']),
-        next: () => this._router.navigate(['/success'])
-      })
+    // const email =loginForm.value.email;
+    // const password = loginForm.value.password;
+    // this._validationService.login(email, password)
+    //   .subscribe({
+    //     error: () => this._router.navigate(['/error']),
+    //     next: () => this._router.navigate(['/success'])
+    //   })
   }
 }
 

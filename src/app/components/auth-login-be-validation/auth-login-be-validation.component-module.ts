@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AuthLoginBeValidationComponent } from './auth-login-be-validation.component';
 import { NgIf } from '@angular/common';
-import {InputErrorPipe} from "../../input-error.pipe";
+import {InputErrorPipe} from "../../pipes/input-error.pipe";
 
 
 @NgModule({

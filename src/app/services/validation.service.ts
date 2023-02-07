@@ -8,15 +8,8 @@ export class ValidationService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  login(email: string, password: string): Observable<LoginModel> {
-    return this._httpClient.post<LoginModel>(
-      'https://us-central1-courses-auth.cloudfunctions.net/auth/login',
-      {
-        data: {
-          email: email,
-          password: password,
-        },
-      }
-    );
+  login(user: LoginModel): Observable<void> {
+    return this._httpClient.post<void>(
+      'https://us-central1-courses-auth.cloudfunctions.net/auth/login', {data: user});
   }
 }

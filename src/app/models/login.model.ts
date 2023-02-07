@@ -1,6 +1,4 @@
 export interface LoginModel {
-  readonly data: {
-     email: string;
-     password: string;
-  }
+    readonly email: string;
+    readonly password: string;
 }
